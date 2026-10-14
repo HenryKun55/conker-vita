@@ -1,0 +1,131 @@
+# Conker's Bad Fur Day — native PS Vita port
+
+Conker's Bad Fur Day (Rare, 2001) running natively on the PS Vita / PS TV. This is
+not an emulator: the N64 game was statically recompiled to C with
+[N64Recomp](https://github.com/N64Recomp/N64Recomp) (based on
+[CBFD-Recompiled](https://github.com/sciaschi/CBFD-Recompiled)) and built for the
+Vita, with the N64's graphics drawn by a renderer written for the Vita's GPU
+(sceGxm) and the audio microcode running on the Vita's CPU.
+
+## Disclaimer
+
+**This release contains no game files, and none will be provided.** It is an
+unofficial fan project, not affiliated with or endorsed by Rare, Microsoft,
+Nintendo or Sony. To play you need your own copy of the game: a ROM dumped from
+your US cartridge. Please don't ask for ROMs in this thread or in DMs.
+
+## What works
+
+- The game, with saves (the N64's EEPROM, kept in `ux0:data/conker/saves`).
+- Runs at the game's own 30 fps cap in play (the rainy opening, one of the
+  heaviest scenes, holds 29-30 fps on a real Vita), widescreen 16:9 (4:3
+  optional), CPU clocked to 444 MHz automatically.
+- Sound and music, cutscenes (skippable, even the ones you haven't seen yet, if
+  you like).
+- **Text in six languages**: English, Português (Brasil), Español, Français,
+  Deutsch, Italiano. Every speech bubble, menu and hint, with the accented letters
+  drawn into the game's own font. The translations go all in on the swearing,
+  as Conker would want.
+- Censorship on or off (the game's own bleeps, in every language).
+- Remappable controls, both sticks, front and rear touch.
+- Updates from inside the game (see below).
+
+## Requirements
+
+1. A PS Vita or PS TV with HENkaku/Ensō and VitaShell.
+2. **libshacccg.suprx** (the runtime shader compiler) in `ur0:data/`. If you
+   already play other ports you have it. Otherwise, extract it with
+   [ShaRKBR33D](https://github.com/Rinnegatamante/ShaRKBR33D).
+3. **The US ROM** of Conker's Bad Fur Day:
+   - SHA-1 `4cbadd3c4e0729dec46af64ad018050eada4f47a` (big-endian `.z64`; a
+     byte-swapped dump of the same cartridge works too)
+   - Other regions (PAL) are not supported.
+
+## Installation
+
+1. Install `conker.vpk` with VitaShell.
+2. Copy your ROM to the Vita (USB or FTP with VitaShell) as:
+
+   ```
+   ux0:data/conker/baserom.us.z64
+   ```
+
+3. Launch **Conker's Bad Fur Day** from the LiveArea. The first start checks the
+   ROM and keeps its own copy; after that the file you copied can be deleted.
+
+Updating to a newer version only needs the new vpk (or the in-game updater); your
+saves and settings in `ux0:data/conker/` are kept.
+
+## Controls
+
+| Vita | N64 |
+| --- | --- |
+| Left stick | Analog stick |
+| Right stick | C-buttons (camera, ...) |
+| Cross | A |
+| Square | B |
+| L | Z |
+| R | R |
+| Triangle | C-Up |
+| Circle | C-Right |
+| Rear touch, bottom left / bottom right | C-Left / C-Down |
+| D-pad | D-pad |
+| Start | Start |
+| Select | L |
+
+Every N64 button can be bound to one or two Vita controls (buttons, either
+stick's directions, the four corners of the front or rear touch panels).
+
+## The port's menu
+
+**START + SELECT** opens the port's own menu, at any time (it closes the same
+way; the game is paused while it's open):
+
+- **Controls**: rebind every N64 button.
+- **Analog stick**: which stick is the N64's, dead zone, sensitivity, inversion.
+- **Widescreen**: 16:9 or the original 4:3; **Cutscenes**: widescreen or 4:3.
+- **Skip cutscenes (L)**: only the ones you've watched (as the original), any,
+  or even the unskippable ones.
+- **Language (text)**: English, Português, Español, Français, Deutsch, Italiano.
+- **Censorship**: the swearing in full or bleeped.
+- **Quit game**.
+
+Your choices are saved in `ux0:data/conker/controls.ini`.
+
+## Updates
+
+At start-up, over the boot picture, the game looks for a newer release of the
+port (for at most about three seconds; without Wi-Fi it goes straight on). When
+one is found it offers it: X installs it, O skips it. The download is checked,
+the game closes, puts the new files in place of its own and starts again; saves,
+settings and your ROM in `ux0:data/conker` are kept. If anything goes wrong the
+installed game keeps working, and the details are in
+`ux0:data/conker/update/update.log`. The installed version is shown in the
+bottom right corner of the boot screen.
+
+Installing an update needs **Enable Unsafe Homebrew** on in Settings > HENkaku
+Settings (the installer writes the game's own folder in `ux0:app`). With it off
+the game only tells you that a new version is available and how to turn it on,
+then starts as usual.
+
+To turn the check off, create `ux0:data/conker/conker.cfg` with the line
+`update_check=0`.
+
+## Known issues
+
+- Only the US ROM is supported.
+- Multiplayer has not been tested.
+- The log is written to `ux0:data/conker/log.txt`; please include it when
+  reporting a problem.
+
+## Credits
+
+- Port to the PS Vita: HenryKun55.
+- [CBFD-Recompiled](https://github.com/sciaschi/CBFD-Recompiled) by Sean Ciaschi
+  and contributors, on [N64Recomp](https://github.com/N64Recomp/N64Recomp) and
+  N64ModernRuntime by Wiseguy and contributors.
+- [VitaSDK](https://vitasdk.org), [vitaGL](https://github.com/Rinnegatamante/vitaGL)
+  and vitashark by Rinnegatamante.
+- Boot screen font: Oswald (SIL Open Font License).
+
+Conker's Bad Fur Day © Rare / Microsoft. This project is not affiliated with them.
