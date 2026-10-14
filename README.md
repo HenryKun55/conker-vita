@@ -40,6 +40,12 @@ your US cartridge. Please don't ask for ROMs in this thread or in DMs.
    - SHA-1 `4cbadd3c4e0729dec46af64ad018050eada4f47a` (big-endian `.z64`; a
      byte-swapped dump of the same cartridge works too)
    - Other regions (PAL) are not supported.
+   - To check yours before copying it: `shasum -a 1 yourfile.z64` (macOS/Linux) or
+     `certutil -hashfile yourfile.z64 SHA1` (Windows) must print the SHA-1 above.
+     A byte-swapped `.v64`/`.n64` dump of the same cartridge prints a different
+     SHA-1 but is accepted too: rename it to `baserom.us.z64` and the game converts it.
+   - With a wrong ROM the game says so at start-up ("This isn't the US version of
+     Conker's Bad Fur Day, the only one supported.") and closes; nothing is changed.
 
 ## Installation
 
