@@ -23,10 +23,15 @@ your US cartridge. Please don't ask for ROMs in this thread or in DMs.
 - Sound and music, cutscenes (skippable, even the ones you haven't seen yet, if
   you like).
 - **Text in six languages**: English, Português (Brasil), Español, Français,
-  Deutsch, Italiano. Every speech bubble, menu and hint, with the accented letters
-  drawn into the game's own font. The translations go all in on the swearing,
-  as Conker would want.
-- Censorship on or off (the game's own bleeps, in every language).
+  Deutsch, Italiano. Every speech bubble, menu, tutorial and hint, with the
+  accented letters drawn into the game's own font. The translations are faithful
+  to the original: swearing where the game swears, local slang and accents
+  (the farmhands, the cavemen, Birdy, the Professor...). The text language follows
+  your Vita's system language until you pick one.
+- Censorship on or off (off by default): the swear words or the game's own symbols.
+- **Optional up to 60 fps (interpolated)**: a frame drawn between each two of the
+  game's where there's time for it (Frame rate in the port's menu). Off by default:
+  shadows, footprints and dust still move at 30.
 - Remappable controls, both sticks, front and rear touch.
 - Updates from inside the game (see below).
 
@@ -94,6 +99,7 @@ way; the game is paused while it's open):
   or even the unskippable ones.
 - **Language (text)**: English, Português, Español, Français, Deutsch, Italiano.
 - **Censorship**: the swearing in full or bleeped.
+- **Frame rate**: 30 (original) or up to 60 (interpolated).
 - **Quit game**.
 
 Your choices are saved in `ux0:data/conker/controls.ini`.
