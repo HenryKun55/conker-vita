@@ -130,6 +130,11 @@ To turn the check off, create `ux0:data/conker/conker.cfg` with the line
 - The log is written to `ux0:data/conker/log.txt`; please include it when
   reporting a problem.
 
+## Source code
+
+The port's source is at [HenryKun55/CBFD-Recompiled](https://github.com/HenryKun55/CBFD-Recompiled)
+(branch `vita-port`, the `vita/` folder), with how to build it in its README.
+
 ## Credits
 
 - Port to the PS Vita: HenryKun55.
