@@ -20,8 +20,8 @@ your US cartridge. Please don't ask for ROMs in this thread or in DMs.
 - Runs at the game's own 30 fps cap in play (the rainy opening, one of the
   heaviest scenes, holds 29-30 fps on a real Vita), widescreen 16:9 (4:3
   optional), CPU clocked to 444 MHz automatically.
-- Sound and music, cutscenes (skippable, even the ones you haven't seen yet, if
-  you like).
+- Sound and music (the audio microcode reimplemented natively, bit-exact with the
+  original), cutscenes (skippable, even the ones you haven't seen yet, if you like).
 - **Text in six languages**: English, Português (Brasil), Español, Français,
   Deutsch, Italiano. Every speech bubble, menu, tutorial and hint, with the
   accented letters drawn into the game's own font. The translations are faithful
@@ -32,7 +32,12 @@ your US cartridge. Please don't ask for ROMs in this thread or in DMs.
 - **Optional up to 60 fps (interpolated)**: a frame drawn between each two of the
   game's where there's time for it (Frame rate in the port's menu). Off by default:
   shadows, footprints and dust still move at 30.
-- Remappable controls, both sticks, front and rear touch.
+- **The Vita's buttons in the game**: every N64 button picture (speech bubbles,
+  the hint book, menus, the B-pads in Windy) is redrawn as the Vita control bound
+  to that button, and follows your remapping.
+- Remappable controls, both sticks, front and rear touch; aiming with the right
+  stick and inverted aiming, if you like.
+- Skip the intro, and cheats (infinite health and lives, full cash).
 - Updates from inside the game (see below).
 
 ## Requirements
@@ -89,18 +94,20 @@ stick's directions, the four corners of the front or rear touch panels).
 
 ## The port's menu
 
-**START + SELECT** opens the port's own menu, at any time (it closes the same
-way; the game is paused while it's open):
+**SELECT twice** opens the port's own menu, at any time (it closes the same
+way; the game is paused while it's open). It's in pages:
 
-- **Controls**: rebind every N64 button.
-- **Analog stick**: which stick is the N64's, dead zone, sensitivity, inversion.
-- **Widescreen**: 16:9 or the original 4:3; **Cutscenes**: widescreen or 4:3.
-- **Skip cutscenes (L)**: only the ones you've watched (as the original), any,
-  or even the unskippable ones.
-- **Language (text)**: English, Português, Español, Français, Deutsch, Italiano.
-- **Censorship**: the swearing in full or bleeped.
-- **Frame rate**: 30 (original) or up to 60 (interpolated).
-- **Quit game**.
+- **Picture**: widescreen 16:9 or the original 4:3, cutscenes widescreen or 4:3,
+  frame rate 30 (original) or up to 60 (interpolated).
+- **Buttons**: rebind every N64 button.
+- **Sticks and aiming**: which stick moves Conker, dead zone, sensitivity,
+  inverting either stick, aiming with the camera stick, aiming left/right and
+  up/down inverted or not.
+- **Game**: language (English, Português, Español, Français, Deutsch, Italiano),
+  censorship, skip cutscenes (only the ones you've watched, any, or even the
+  unskippable ones), skip the intro.
+- **Cheats**: infinite health, infinite lives, full cash.
+- **Reset buttons and sticks**, **Quit game**.
 
 Your choices are saved in `ux0:data/conker/controls.ini`.
 
