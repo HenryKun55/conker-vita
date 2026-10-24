@@ -29,14 +29,18 @@ your US cartridge. Please don't ask for ROMs in this thread or in DMs.
   (the farmhands, the cavemen, Birdy, the Professor...). The text language follows
   your Vita's system language until you pick one.
 - Censorship on or off (off by default): the swear words or the game's own symbols.
-- **Optional up to 60 fps (interpolated)**: a frame drawn between each two of the
-  game's where there's time for it (Frame rate in the port's menu). Off by default:
-  shadows, footprints and dust still move at 30.
+- **Real 60 fps, optional**: the game's own logic runs at 60 (Frame rate in the
+  port's menu), not in-between frames. On a real Vita it holds 58-60 fps almost
+  everywhere; the heaviest scenes drop toward 30, still at the right speed. Off by
+  default.
 - **The Vita's buttons in the game**: every N64 button picture (speech bubbles,
-  the hint book, menus, the B-pads in Windy) is redrawn as the Vita control bound
-  to that button, and follows your remapping.
+  the hint book, menus) is redrawn as the Vita control bound to that button, and
+  the B pads carved on the ground show the control bound to B. All of it follows
+  your remapping.
 - Remappable controls, both sticks, front and rear touch; aiming with the right
   stick and inverted aiming, if you like.
+- A camera that stays out of walls, if you like (it pulls in towards Conker
+  instead of ending up behind a door or a pillar).
 - Skip the intro, and cheats (infinite health and lives, full cash).
 - Updates from inside the game (see below).
 
@@ -98,11 +102,11 @@ stick's directions, the four corners of the front or rear touch panels).
 way; the game is paused while it's open). It's in pages:
 
 - **Picture**: widescreen 16:9 or the original 4:3, cutscenes widescreen or 4:3,
-  frame rate 30 (original) or up to 60 (interpolated).
+  frame rate 30 (original) or 60.
 - **Buttons**: rebind every N64 button.
 - **Sticks and aiming**: which stick moves Conker, dead zone, sensitivity,
   inverting either stick, aiming with the camera stick, aiming left/right and
-  up/down inverted or not.
+  up/down inverted or not, the camera avoiding walls.
 - **Game**: language (English, Português, Español, Français, Deutsch, Italiano),
   censorship, skip cutscenes (only the ones you've watched, any, or even the
   unskippable ones), skip the intro.
